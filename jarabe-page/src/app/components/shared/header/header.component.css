@@ -1,0 +1,11 @@
+.circular{
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  height: 10vh;
+}
+
+.change-color{
+
+  filter: hue-rotate(180deg) brightness(1000%);
+
+}

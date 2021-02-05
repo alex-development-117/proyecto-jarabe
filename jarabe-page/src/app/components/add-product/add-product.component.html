@@ -1,0 +1,64 @@
+<div class="aniadir-container bg-light">
+  <div class="contenedor-input">
+    <div class="contenedor-blanco shadow-sm">
+      <div class="row">
+        <div class="col-12 padding-formulario">
+          <form (ngSubmit)="upload(f)" #f='ngForm' class="d-none d-xl-block" action="">
+            <h3 class="text-center mb-5" style="color: #3B9BE1;">Añadir Producto</h3>
+            <div class="form-group row d-flex justify-content-center align-items-center">
+              <label class="col-sm-5 form-group-label text-left padding-label-form" for="">Nombre</label>
+              <div class="col-sm-7">
+                <input [(ngModel)]='producto.nombre_producto' name='nombre_producto' type="text" class="text-center text-perso shadow-sm" placeholder="" required>
+              </div>
+            </div>
+            <div class="form-group row d-flex justify-content-center align-items-center">
+              <label class="col-sm-5 form-group-label text-left padding-label-form" for="">SKU</label>
+              <div class="col-sm-7">
+                <input [(ngModel)]='producto.SKU' name='SKU' type="text" class="text-center text-perso shadow-sm" placeholder="" required>
+              </div>
+            </div>
+            <div class="form-group row d-flex justify-content-center align-items-center">
+              <label class="col-sm-5 form-group-label text-left padding-label-form" for="">Descripción</label>
+              <div class="col-sm-7">
+                <input [(ngModel)]='producto.descripcion_producto' name='descripcion_producto' type="text" class="text-center text-perso shadow-sm" placeholder="" required>
+              </div>
+            </div>
+            <div class="form-group row d-flex justify-content-center align-items-center">
+              <label class="col-sm-5 form-group-label text-left padding-label-form" for="">Añadir imagen</label>
+              <div class="col-sm-7">
+                <input type="file" accept="image/*" (change)="seleccionarArchivo($event)" class="text-center text-perso" placeholder="" required>
+              </div>
+            </div>
+            <div class="form-group d-flex justify-content-center">
+              <button type="submit" class="btn btn-secondary mr-5">Añadir producto</button>
+              <button type="reset" class="btn btn-danger">Cancelar</button>
+            </div>
+          </form>
+
+          <form (ngSubmit)="upload(f)" #f='ngForm'  class="d-xl-none" action="">
+            <h3 class="text-center mb-5" style="color: #3B9BE1;">Dar de alta proveedores</h3>
+            <div class="form-group row d-flex justify-content-center align-items-center">
+              <div class="col-sm-12 d-flex justify-content-center">
+                <input [(ngModel)]='producto.nombre_producto' name='nombre_producto' type="text" class="text-center text-perso shadow-sm" placeholder="Nombre" required>
+              </div>
+              <div class="col-sm-12 d-flex justify-content-center">
+                <input [(ngModel)]='producto.SKU' name='SKU' type="text" class="text-center text-perso shadow-sm" placeholder="SKU" required>
+              </div>
+              <div class="col-sm-12 d-flex justify-content-center">
+                <input [(ngModel)]='producto.descripcion_producto' name='descripcion_producto' type="text" class="text-center text-perso shadow-sm" placeholder="Descripción" required>
+              </div>
+              <div class="col-sm-12 d-flex justify-content-center">
+                <input  type="file" accept="image/*" (change)="seleccionarArchivo($event)" class="text-center text-perso" required>
+              </div>
+            </div>
+            <div class="form-group d-flex-column justify-items-center justify-content-center px-4">
+              <button class="btn btn-secondary mr-5 mb-3 btn-block">Dar de alta</button>
+              <button class="btn btn-danger mb-3 btn-block">Cancelar</button>
+            </div>
+          </form>
+        </div>
+        <div class="col-2"></div>
+      </div>
+    </div>
+  </div>
+</div>

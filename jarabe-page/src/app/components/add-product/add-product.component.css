@@ -1,0 +1,45 @@
+.aniadir-container{
+  background-color: #F6F6F6;
+  height: 100%;
+  width: auto;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.contenedor-input{
+
+  padding: 3%;
+  padding-left: 20%;
+  padding-right: 20%;
+  height: 100%;
+
+}
+
+.contenedor-blanco{
+
+  background-color: #fff;
+  width: 100%;
+  height: 100%;
+
+}
+
+.padding-formulario{
+
+  margin-top: 50px;
+
+}
+
+.text-perso{
+  border: 0;
+  border-radius: 5px;
+  width: 70%;
+  height: 40px;
+  margin-bottom: 10px;
+}
+
+.padding-label-form{
+
+  padding-left: 10vw;
+
+}
+

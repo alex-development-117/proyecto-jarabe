@@ -1,1 +1,72 @@
-<p>proveedores works!</p>
+<div class="proveedor-container bg-light">
+  <div class="contenedor-input">
+    <div class="contenedor-blanco shadow-sm">
+      <div class="row">
+        <div class="col-12 padding-formulario">
+          <form (ngSubmit)="onSubmit(f)" #f="ngForm" class="d-none d-xl-block">
+            <h3 class="text-center mb-5" style="color: #3B9BE1;">Dar de alta proveedores</h3>
+            <div class="form-group row d-flex justify-content-center align-items-center">
+              <label class="col-sm-4 form-group-label text-left padding-label-form" for="">Nombre</label>
+              <div class="col-sm-8">
+                <input [(ngModel)]="proveedor.nombre_cuenta" name="nombre" type="text" class="text-center text-perso shadow-sm" placeholder="" required>
+              </div>
+            </div>
+            <div class="form-group row d-flex justify-content-center align-items-center">
+              <label class="col-sm-4 form-group-label text-left padding-label-form" for="">Estado</label>
+              <div class="col-sm-8">
+                <input [(ngModel)]="proveedor.estado" name="estado" type="text" class="text-center text-perso shadow-sm" placeholder="" required>
+              </div>
+            </div>
+            <div class="form-group row d-flex justify-content-center align-items-center">
+              <label class="col-sm-4 form-group-label text-left padding-label-form" for="">Teléfono</label>
+              <div class="col-sm-8">
+                <input  [(ngModel)]="proveedor.telefono" name="telefono" type="text" class="text-center text-perso shadow-sm" placeholder="" required>
+              </div>
+            </div>
+            <div class="form-group row d-flex justify-content-center align-items-center">
+              <label class="col-sm-4 form-group-label text-left padding-label-form" for="">RFC</label>
+              <div class="col-sm-8">
+                <input  [(ngModel)]="proveedor.RFC" name="RFC" type="text" class="text-center text-perso shadow-sm" placeholder="" required>
+              </div>
+            </div>
+            <div class="form-group row d-flex justify-content-center align-items-center">
+              <label class="col-sm-4 form-group-label text-left padding-label-form" for="">Contraseña</label>
+              <div class="col-sm-8">
+                <input   [(ngModel)]="proveedor.passwd_cuenta" name="passwd" type="password" class="text-center text-perso shadow-sm" required>
+              </div>
+            </div>
+            <div class="form-group d-flex justify-content-center">
+              <button type="submit" class="btn btn-secondary mr-5">Dar de alta</button>
+              <button type="reset" class="btn btn-danger">Cancelar</button>
+            </div>
+          </form>
+          <form (ngSubmit)="onSubmit(f)" #f="ngForm" class="d-xl-none">
+            <h3 class="text-center mb-5" style="color: #3B9BE1;">Dar de alta proveedores</h3>
+            <div class="form-group row d-flex justify-content-center align-items-center">
+              <div class="col-sm-12 d-flex justify-content-center">
+                <input type="text" id="nombre" [(ngModel)]="proveedor.nombre_cuenta" name="nombre" class="text-center form-control text-perso shadow-sm" placeholder="Nombre" required>
+              </div>
+              <div class="col-sm-12 d-flex justify-content-center">
+                <input type="text" id="estado" [(ngModel)]="proveedor.estado" name="estado" class="text-center form-control text-perso shadow-sm" placeholder="Estado" required>
+              </div>
+              <div class="col-sm-12 d-flex justify-content-center">
+                <input type="text" id="telefono" [(ngModel)]="proveedor.telefono" name="teléfono" class="text-center form-control text-perso shadow-sm" placeholder="Teléfono">
+              </div>
+              <div class="col-sm-12 d-flex justify-content-center">
+                <input type="text" id="RFC" [(ngModel)]="proveedor.RFC" name="RFC" class="text-center form-control text-perso shadow-sm" placeholder="RFC" required>
+              </div>
+              <div class="col-sm-12 d-flex justify-content-center">
+                <input type="password" id="passwd" [(ngModel)]="proveedor.passwd_cuenta" name="passwd" class="text-center form-control text-perso shadow-sm" placeholder="Contraseña" required>
+              </div>
+            </div>
+            <div class="form-group d-flex-column justify-items-center justify-content-center px-4">
+              <button type="submit" class="btn btn-secondary mr-5 mb-3 btn-block">Dar de alta</button>
+              <button type="reset" class="btn btn-danger mb-3 btn-block">Cancelar</button>
+            </div>
+          </form>
+        </div>
+        <div class="col-2"></div>
+      </div>
+    </div>
+  </div>
+</div>

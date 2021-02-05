@@ -1,0 +1,22 @@
+.inventary-container{
+  background-color: #F6F6F6;
+  height: 100%;
+  width: auto;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.contenedor-input{
+
+  padding: 5%;
+  padding-left: 5%;
+  padding-right: 5%;
+  height: 100%;
+
+}
+
+.contenedor-blanco{
+
+  background-color: #fff;
+
+}

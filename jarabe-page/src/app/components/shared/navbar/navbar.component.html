@@ -1,5 +1,26 @@
-<div class="vertical-menu">
-  <a href="#" class="active">Productos</a>
-  <a href="#">Proveedores</a>
-  <a href="#">Inventario</a>
+<div class="vertical-menu d-none d-xl-block">
+  <ul class="undecorated">
+    <li>
+      <a routerLinkActive="active" [routerLink]="['proveedores']">Proveedores</a>
+    </li>
+    <li>
+      <a routerLinkActive="active" [routerLink]="['productos']">Productos</a>
+    </li>
+    <li>
+      <a routerLinkActive="active" [routerLink]="['inventario']">Inventario</a>
+    </li>
+  </ul>
+</div>
+<div class="vertical-menu d-block d-xl-none">
+  <ul class="undecorated">
+    <li>
+      <a routerLinkActive="active" style="padding-left: 40%; padding-right: 40%;" [routerLink]="['proveedores']"><i class="fas fa-address-book" ></i></a>
+    </li>
+    <li>
+      <a routerLinkActive="active" style="padding-left: 40%; padding-right: 40%;" [routerLink]="['productos']"><i class="fab fa-product-hunt" ></i></a>
+    </li>
+    <li>
+      <a routerLinkActive="active" style="padding-left: 40%; padding-right: 40%;" [routerLink]="['inventario']"><i class="fas fa-boxes"></i></a>
+    </li>
+  </ul>
 </div>

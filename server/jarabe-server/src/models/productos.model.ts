@@ -40,10 +40,10 @@ export class Productos extends Entity {
   fecha_incorporacion: string;
 
   @property({
-    type: 'object',
+    type: 'string',
     required: true,
   })
-  imagen: object;
+  imagen: string;
 
   constructor(data?: Partial<Productos>) {
     super(data);

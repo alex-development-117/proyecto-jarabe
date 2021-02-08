@@ -7,13 +7,13 @@ import {
   Where,
 } from '@loopback/repository';
 import {
-  post,
-  param,
+  del,
   get,
   getModelSchemaRef,
+  param,
   patch,
+  post,
   put,
-  del,
   requestBody,
 } from '@loopback/rest';
 import {Productos} from '../models';
@@ -22,7 +22,7 @@ import {ProductosRepository} from '../repositories';
 export class ProductosController {
   constructor(
     @repository(ProductosRepository)
-    public productosRepository : ProductosRepository,
+    public productosRepository: ProductosRepository,
   ) {}
 
   @post('/productos', {
@@ -120,7 +120,8 @@ export class ProductosController {
   })
   async findById(
     @param.path.number('id') id: number,
-    @param.filter(Productos, {exclude: 'where'}) filter?: FilterExcludingWhere<Productos>
+    @param.filter(Productos, {exclude: 'where'})
+    filter?: FilterExcludingWhere<Productos>,
   ): Promise<Productos> {
     return this.productosRepository.findById(id, filter);
   }

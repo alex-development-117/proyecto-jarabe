@@ -10,13 +10,14 @@ import { ProductsService, Producto } from '../../services/products.service';
 export class AddProductComponent implements OnInit {
 
   date = new Date();
+  file: File;
   producto: Producto = {
     nombre_producto: "",
     descripcion_producto: "",
     eliminado: false,
     fecha_incorporacion: null,
     SKU:    "",
-    imagen: null
+    imagen: ""
   }
 
   constructor(private _productService: ProductsService) { }
@@ -26,15 +27,21 @@ export class AddProductComponent implements OnInit {
 
   upload(ngForm: NgForm){
     this.producto.fecha_incorporacion=this.date;
-    console.log(this.producto);
-    this._productService.postProducto(this.producto).subscribe(
-      datos => console.log(datos)
+    const formData = new FormData();
+    formData.append('file', this.file);
+    this._productService.postImageProductos(formData).subscribe(res => this.getFileName(res.filename)
     );
   }
 
   seleccionarArchivo(event){
     var files = event.target.files;
-    this.producto.imagen = files[0];
+    this.file = <File>files[0];
+  }
+
+  getFileName(filename: string){
+    this.producto.imagen = filename;
+    this._productService.postProducto(this.producto).subscribe(res => res);
+    console.log(this.producto);
   }
 
 }

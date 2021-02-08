@@ -12,12 +12,20 @@ export class ProductosComponent implements OnInit {
 
   productos: Producto[] = []
 
+
   constructor(private _productsService: ProductsService) {
 
   }
 
   ngOnInit(): void {
-    // this.productos = this._productsService.getProductos(); Cambiar
+    this._productsService.getProducto().subscribe(data => this.getProductosData(data));
+    console.log(this.productos);
+  }
+
+  getProductosData(data: any){
+    this.productos = data;
+    console.log(this.productos);
+
   }
 
 }
